@@ -75,3 +75,47 @@ function replicateDivs() {
 
 replicateDivs();
 
+function enviarMensagem() { }
+
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+    const mensagemStatus = document.getElementById('mensagemStatus');
+
+    dialog.showModal();
+
+    mensagemStatus.textContent = 'Todos os campos são obrigatórios!';
+
+    if (nome === '' || email === '' || mensagem === '') {
+        mensagemStatus.textContent = 'Todos os campos são obrigatórios!';
+        mensagemStatus.style.color = 'red';
+        return;
+    }
+
+    const emailValido = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailValido.test(email)) {
+        mensagemStatus.textContent = 'Por favor, insira um e-mail válido!';
+        mensagemStatus.style.color = 'red';
+        return;
+    }
+
+    mensagemStatus.textContent = 'Mensagem enviada com sucesso!';
+    mensagemStatus.style.color = 'green';
+    document.getElementById('contactForm').reset();
+});
+
+
+const dialog = document.getElementById('myDialog');
+const openButton = document.getElementById('openButton');
+const closeButton = document.getElementById('closeButton');
+
+
+
+closeButton.addEventListener('click', () => {
+    dialog.close(); // Closes the dialog
+});

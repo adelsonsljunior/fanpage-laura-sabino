@@ -1,8 +1,6 @@
 body{
     background: linear-gradient(to top, rgba(2,0,36,1) 0%, rgba(121,9,38,1) 35%, rgba(172,36,36,1) 100%);
-    background-repeat: no-repeat;
-
-    
+    background-repeat: no-repeat;   
 }
 
 img{
@@ -69,24 +67,27 @@ h1, h2{
     width: 100%;
     max-width: 500px;
 
+    /*centralizando*/
     margin: auto;
 
     margin-top: 100px;
     margin-bottom: 128px;
 
-
 }
+
 .contact-form h2 {
     text-align: center;
     margin-bottom: 20px;
     color: rgba(121,9,38,1);
 }
+
 .contact-form label {
     font-size: 16px;
     color: #333;
     margin-bottom: 8px;
     display: block;
 }
+
 .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
     width: 100%;
     padding: 10px;
@@ -96,11 +97,13 @@ h1, h2{
     font-size: 16px;
     box-sizing: border-box;
 }
+
 .contact-form textarea {
     resize: vertical;
     min-height: 120px;
 }
-.contact-form input[type="submit"] {
+
+.contact-form button {
     width: 100%;
     background-color: black;
     color: white;
@@ -111,14 +114,53 @@ h1, h2{
     cursor: pointer;
     text-transform: uppercase;
 }
+
 .contact-form input[type="submit"]:hover {
     background-color: #333;
 }
 
-/* Cor do botão quando o usuário clica nele */
-.contact-form input[type="submit"]:active {
-    background-color: red;
+button:hover {
+    background-color: #444; /* Altera a cor ao passar o mouse */
 }
-.contact-form input[type="submit"]:hover {
-    background-color: #333;
+
+button:active {
+    background-color: red; /* Cor vermelha ao clicar */
+}
+
+/* Estilo da caixa de diálogo */
+dialog {
+    width: 300px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Personalização do botão "Fechar" */
+#closeButton {
+    background-color: #d3d3d3; /* Cinza claro */
+    color: #333; /* Texto escuro */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#closeButton:hover {
+    background-color: #c0c0c0; /* Efeito hover mais escuro */
+}
+
+#closeButton:active {
+    background-color: #a9a9a9; /* Efeito ao clicar */
+}
+
+/* Adicionando uma transição suave ao abrir a caixa de diálogo */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
