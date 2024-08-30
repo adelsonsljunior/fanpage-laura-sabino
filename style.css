@@ -1,7 +1,6 @@
 body{
     background: linear-gradient(to top, rgba(2,0,36,1) 0%, rgba(121,9,38,1) 35%, rgba(172,36,36,1) 100%);
-    background-repeat: no-repeat;
-    height: 100vh;
+    background-repeat: no-repeat;   
 }
 
 img{
@@ -12,18 +11,21 @@ img{
 h1, h2{
     color: white;
 
-    /*font-family: "Roboto", sans-serif;
+    /*
+    fo
+    nt-family: ;
     font-weight: 100;
     font-style: normal;*/
 }
 
 #perfil{
-    width: 150px;
+    width: 128px;
 }
 
 #topo{
     display: flex;
     gap: 32px;
+    margin-top: 32px;
     margin-bottom: 64px;
     align-items: center;
     justify-content: center;
@@ -55,4 +57,110 @@ h1, h2{
     text-align: center;
 
     width: 100%;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+
+    /*centralizando*/
+    margin: auto;
+
+    margin-top: 100px;
+    margin-bottom: 128px;
+
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(121,9,38,1);
+}
+
+.contact-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #333;
+}
+
+button:hover {
+    background-color: #444; /* Altera a cor ao passar o mouse */
+}
+
+button:active {
+    background-color: red; /* Cor vermelha ao clicar */
+}
+
+/* Estilo da caixa de diálogo */
+dialog {
+    width: 300px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Personalização do botão "Fechar" */
+#closeButton {
+    background-color: #d3d3d3; /* Cinza claro */
+    color: #333; /* Texto escuro */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#closeButton:hover {
+    background-color: #c0c0c0; /* Efeito hover mais escuro */
+}
+
+#closeButton:active {
+    background-color: #a9a9a9; /* Efeito ao clicar */
+}
+
+/* Adicionando uma transição suave ao abrir a caixa de diálogo */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
