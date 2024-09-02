@@ -96,7 +96,6 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     mensagemStatus.textContent = 'Todos os campos são obrigatórios!';
 
     if (nome === '' || email === '' || mensagem === '') {
-        mensagemStatus.textContent = 'Todos os campos são obrigatórios!';
         mensagemStatus.style.color = 'red';
         return;
     }
