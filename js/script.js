@@ -50,7 +50,7 @@ function replicateDivs() {
         const linkDiv = document.createElement('div');
         const img = document.createElement('img');
         const detalheDiv = document.createElement('div');
-        const h1 = document.createElement('h1');
+        const h2 = document.createElement('h2');
 
         link.href = item.link;
         link.target = "_blank";
@@ -61,9 +61,9 @@ function replicateDivs() {
         img.alt = `photo_${item.title.toLowerCase()}`;
 
         detalheDiv.className = "detalhe";
-        h1.textContent = item.title;
+        h2.textContent = item.title;
 
-        detalheDiv.appendChild(h1);
+        detalheDiv.appendChild(h2);
         linkDiv.appendChild(img);
         linkDiv.appendChild(detalheDiv);
         link.appendChild(linkDiv);
