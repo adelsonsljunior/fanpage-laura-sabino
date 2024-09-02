@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 body{
     background: linear-gradient(to top, rgba(2,0,36,1) 0%, rgba(121,9,38,1) 35%, rgba(172,36,36,1) 100%);
     background-repeat: no-repeat;   
 }
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
 
 img{
     border-radius: 50%;
@@ -11,11 +18,6 @@ img{
 h1, h2{
     color: white;
 
-    /*
-    fo
-    nt-family: ;
-    font-weight: 100;
-    font-style: normal;*/
 }
 
 #perfil{

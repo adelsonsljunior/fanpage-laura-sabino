@@ -58,7 +58,7 @@ function replicateDivs() {
         linkDiv.className = "link";
 
         img.src = item.imgSrc;
-        //img.alt = `photo_${item.title.toLowerCase()}`;
+        img.alt = `photo_${item.title.toLowerCase()}`;
 
         detalheDiv.className = "detalhe";
         h1.textContent = item.title;
@@ -75,12 +75,16 @@ function replicateDivs() {
 
 replicateDivs();
 
-function enviarMensagem() { }
+const dialog = document.getElementById('myDialog');
+const closeButton = document.getElementById('closeButton');
+
+closeButton.addEventListener('click', () => {
+    dialog.close(); // Closes the dialog
+});
+
 
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Impede o envio do formulário
-
-    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -110,12 +114,3 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 });
 
 
-const dialog = document.getElementById('myDialog');
-const openButton = document.getElementById('openButton');
-const closeButton = document.getElementById('closeButton');
-
-
-
-closeButton.addEventListener('click', () => {
-    dialog.close(); // Closes the dialog
-});
